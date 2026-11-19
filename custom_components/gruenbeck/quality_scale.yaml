@@ -6,8 +6,8 @@ rules:
   action-setup: done
   appropriate-polling: done
   brands:
-    status: todo
-    comment: Custom integration; brand assets not submitted.
+    status: done
+    comment: Local brand assets under brand/ (own drawing, not the Grünbeck logo).
   common-modules: done
   config-flow-test-coverage: done
   config-flow: done
