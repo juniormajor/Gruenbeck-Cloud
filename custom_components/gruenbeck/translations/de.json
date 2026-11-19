@@ -191,6 +191,12 @@
       "remaining_amount_of_water": {
         "name": "Adsorber Restwassermenge"
       },
+      "last_regeneration_percentage": {
+        "name": "Umfang letzte Regeneration"
+      },
+      "last_regeneration_percentage_2": {
+        "name": "Umfang letzte Regeneration Tauscher 2"
+      },
       "regeneration_step": {
         "name": "Regenerationsschritt",
         "state": {
@@ -544,6 +550,12 @@
       },
       "regeneration_time_sunday_3": {
         "name": "Regenerationszeit Sonntag #3"
+      },
+      "buzzer_from": {
+        "name": "Signalton erlaubt ab"
+      },
+      "buzzer_to": {
+        "name": "Signalton erlaubt bis"
       }
     },
     "button": {

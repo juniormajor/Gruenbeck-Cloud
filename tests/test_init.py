@@ -44,6 +44,8 @@ async def test_setup_creates_entities(
     assert hass.states.get(f"sensor.{PREFIX}_soft_water_quantity").state == "123456"
     assert hass.states.get(f"sensor.{PREFIX}_salt_range").state == STATE_UNKNOWN
     assert hass.states.get(f"sensor.{PREFIX}_regeneration_step").state == "inactive"
+    assert hass.states.get(f"sensor.{PREFIX}_last_regeneration_extent").state == "68"
+    assert hass.states.get(f"time.{PREFIX}_audio_signal_allowed_from").state == "08:00:00"
     ent_reg = er.async_get(hass)
     entry = ent_reg.async_get(f"sensor.{PREFIX}_soft_water_quantity")
     assert entry.unique_id == f"{SERIAL}_soft_water_quantity"

@@ -45,6 +45,7 @@ REALTIME = {
     "msaltusage": 102.5,
     "mregstatus": 0,
     "mendreg1": "03:12",
+    "mregpercent1": 68,
 }
 
 

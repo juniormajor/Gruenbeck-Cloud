@@ -191,6 +191,12 @@
       "remaining_amount_of_water": {
         "name": "Adsorber remaining amount of water"
       },
+      "last_regeneration_percentage": {
+        "name": "Last regeneration extent"
+      },
+      "last_regeneration_percentage_2": {
+        "name": "Last regeneration extent Exchanger 2"
+      },
       "regeneration_step": {
         "name": "Regeneration step",
         "state": {
@@ -544,6 +550,12 @@
       },
       "regeneration_time_sunday_3": {
         "name": "Regeneration Time Sunday #3"
+      },
+      "buzzer_from": {
+        "name": "Audio signal allowed from"
+      },
+      "buzzer_to": {
+        "name": "Audio signal allowed until"
       }
     },
     "button": {
