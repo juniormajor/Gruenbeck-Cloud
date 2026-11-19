@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Do not close the HTTP session created by Home Assistant (frame helper warning during setup).
+- Brand icon included in the release.
+
 ## 0.1.0
 
 First release.

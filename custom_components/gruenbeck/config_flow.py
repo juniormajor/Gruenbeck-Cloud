@@ -56,10 +56,9 @@ async def async_validate(
 ) -> list[GruenbeckDevice]:
     """Log in and return the softeners of the account."""
     session = async_create_clientsession(hass, cookie_jar=aiohttp.CookieJar(quote_cookie=False))
-    try:
-        return await GruenbeckClient(session, username, password).async_get_devices()
-    finally:
-        await session.close()
+    # Home Assistant closes sessions it created on shutdown; closing them
+    # ourselves is reported as a bug by the frame helper.
+    return await GruenbeckClient(session, username, password).async_get_devices()
 
 
 def _legacy_credentials(hass: HomeAssistant) -> dict[str, str] | None:

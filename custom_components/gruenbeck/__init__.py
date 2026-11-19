@@ -132,7 +132,6 @@ async def async_unload_entry(hass: HomeAssistant, entry: GruenbeckConfigEntry) -
                 with contextlib.suppress(GruenbeckError):
                     await account.client.async_realtime(coordinator.device.id, "leave")
         await account.store.async_save(account.as_storage())
-        await account.client.session.close()
     return unloaded
 
 
