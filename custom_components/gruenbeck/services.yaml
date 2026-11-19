@@ -1,0 +1,50 @@
+regenerate:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: gruenbeck
+set_parameters:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: gruenbeck
+    parameters:
+      required: true
+      example: '{"mode": 2, "regeneration_time_monday_1": "02:00"}'
+      selector:
+        object:
+get_measurements:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: gruenbeck
+    kind:
+      required: true
+      default: water
+      selector:
+        select:
+          options:
+            - water
+            - salt
+          translation_key: kind
+set_salt_level:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: gruenbeck
+    level:
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 200
+          step: 0.5
+          unit_of_measurement: kg

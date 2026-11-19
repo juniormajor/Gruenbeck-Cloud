@@ -1,0 +1,15 @@
+{
+  "domain": "gruenbeck",
+  "name": "Grünbeck",
+  "after_dependencies": ["recorder"],
+  "codeowners": ["@juniormajor"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/juniormajor/Gruenbeck-Cloud",
+  "integration_type": "hub",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/juniormajor/Gruenbeck-Cloud/issues",
+  "loggers": ["custom_components.gruenbeck"],
+  "requirements": [],
+  "version": "0.1.0"
+}

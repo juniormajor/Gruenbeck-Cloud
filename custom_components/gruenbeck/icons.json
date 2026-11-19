@@ -1,0 +1,44 @@
+{
+  "entity": {
+    "sensor": {
+      "soft_water_quantity": { "default": "mdi:water" },
+      "regeneration_counter": { "default": "mdi:counter" },
+      "remaining_capacity_volume": { "default": "mdi:water-percent" },
+      "remaining_capacity_percentage": { "default": "mdi:water-percent" },
+      "salt_range": { "default": "mdi:calendar-range" },
+      "salt_consumption": { "default": "mdi:shaker-outline" },
+      "salt_level": { "default": "mdi:shaker" },
+      "salt_last_day": { "default": "mdi:shaker-outline" },
+      "regeneration_step": { "default": "mdi:autorenew" },
+      "raw_water": { "default": "mdi:water-opacity" },
+      "soft_water": { "default": "mdi:water-opacity" },
+      "last_cloud_update": { "default": "mdi:cloud-clock-outline" },
+      "last_realtime_update": { "default": "mdi:lightning-bolt-outline" }
+    },
+    "binary_sensor": {
+      "regeneration_active": { "default": "mdi:autorenew" }
+    },
+    "button": {
+      "regenerate": { "default": "mdi:autorenew" },
+      "salt_refilled": { "default": "mdi:shaker" },
+      "refresh": { "default": "mdi:refresh" }
+    },
+    "event": {
+      "regeneration": { "default": "mdi:autorenew" },
+      "device_error": { "default": "mdi:alert-circle-outline" }
+    },
+    "select": {
+      "mode": { "default": "mdi:tune-variant" },
+      "regeneration_mode": { "default": "mdi:autorenew" }
+    },
+    "number": {
+      "salt_refill_amount": { "default": "mdi:shaker" }
+    }
+  },
+  "services": {
+    "regenerate": { "service": "mdi:autorenew" },
+    "set_parameters": { "service": "mdi:tune" },
+    "get_measurements": { "service": "mdi:chart-bar" },
+    "set_salt_level": { "service": "mdi:shaker" }
+  }
+}
