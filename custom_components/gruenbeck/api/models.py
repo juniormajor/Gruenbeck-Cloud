@@ -143,6 +143,8 @@ REALTIME_FIELDS: Final[dict[str, Field]] = {
     "step_indication_regeneration_valve_2": Field("mstep2", "int"),
     "current_chlorine": Field("mcurrent", "int"),
     "remaining_amount_of_water": Field("mreswatadmod", "float"),
+    "last_regeneration_percentage": Field("mregpercent1", "int"),
+    "last_regeneration_percentage_2": Field("mregpercent2", "int"),
 }
 
 _ERROR_FIELDS: Final[dict[str, Field]] = {

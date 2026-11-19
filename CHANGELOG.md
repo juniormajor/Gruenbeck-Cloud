@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- New sensors: extent of the last regeneration per exchanger in % (`mregpercent1`/`mregpercent2`), as in the Homey app.
+- New time entities: period in which the audio signal is allowed (`pbuzzfrom`/`pbuzzto`).
+
 ## 0.1.1
 
 - Do not close the HTTP session created by Home Assistant (frame helper warning during setup).

@@ -233,6 +233,21 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda c: c.device.realtime_updated,
     ),
+    GruenbeckSensorDescription(
+        key="last_regeneration_percentage",
+        translation_key="last_regeneration_percentage",
+        native_unit_of_measurement=PERCENTAGE,
+        state_class=SensorStateClass.MEASUREMENT,
+        value_fn=_rt("last_regeneration_percentage"),
+    ),
+    GruenbeckSensorDescription(
+        key="last_regeneration_percentage_2",
+        translation_key="last_regeneration_percentage_2",
+        entity_registry_enabled_default=False,
+        native_unit_of_measurement=PERCENTAGE,
+        state_class=SensorStateClass.MEASUREMENT,
+        value_fn=_rt("last_regeneration_percentage_2"),
+    ),
     # Disabled by default, as in hagruenbeck_cloud
     GruenbeckSensorDescription(
         key="next_service",

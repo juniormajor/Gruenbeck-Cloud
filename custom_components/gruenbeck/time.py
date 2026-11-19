@@ -25,6 +25,13 @@ TIMES: tuple[TimeEntityDescription, ...] = tuple(
     )
     for day in DAYS
     for slot in (1, 2, 3)
+) + tuple(
+    TimeEntityDescription(
+        key=key,
+        translation_key=key,
+        entity_category=EntityCategory.CONFIG,
+    )
+    for key in ("buzzer_from", "buzzer_to")
 )
 
 
