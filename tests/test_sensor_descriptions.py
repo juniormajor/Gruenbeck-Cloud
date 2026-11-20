@@ -30,11 +30,7 @@ TOTAL_ONLY = {SensorDeviceClass.VOLUME, SensorDeviceClass.WATER}
 
 def test_numeric_sensors_have_state_class() -> None:
     """Every sensor with a unit outside the exception list gets statistics."""
-    missing = [
-        d.key
-        for d in SENSORS
-        if d.state_class is None and d.key not in WITHOUT_STATE_CLASS
-    ]
+    missing = [d.key for d in SENSORS if d.state_class is None and d.key not in WITHOUT_STATE_CLASS]
     assert missing == []
 
 
