@@ -126,6 +126,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="raw_water",
         native_unit_of_measurement=UNIT_DH,
         entity_category=EntityCategory.DIAGNOSTIC,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_hardness("raw_water_hardness", "raw_water"),
     ),
     GruenbeckSensorDescription(
@@ -133,6 +134,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="soft_water",
         native_unit_of_measurement=UNIT_DH,
         entity_category=EntityCategory.DIAGNOSTIC,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_hardness("soft_water_hardness", "soft_water"),
     ),
     GruenbeckSensorDescription(
@@ -163,7 +165,8 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         key="remaining_capacity_volume",
         translation_key="remaining_capacity_volume",
         native_unit_of_measurement=UnitOfVolume.CUBIC_METERS,
-        device_class=SensorDeviceClass.VOLUME,
+        device_class=SensorDeviceClass.VOLUME_STORAGE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("remaining_capacity_volume"),
     ),
     GruenbeckSensorDescription(
@@ -278,6 +281,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR,
         device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("current_flow_rate_2"),
     ),
     GruenbeckSensorDescription(
@@ -285,7 +289,8 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="remaining_capacity_volume_2",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolume.CUBIC_METERS,
-        device_class=SensorDeviceClass.VOLUME,
+        device_class=SensorDeviceClass.VOLUME_STORAGE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("remaining_capacity_volume_2"),
     ),
     GruenbeckSensorDescription(
@@ -293,6 +298,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="remaining_capacity_percentage_2",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=PERCENTAGE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("remaining_capacity_percentage_2"),
     ),
     GruenbeckSensorDescription(
@@ -301,6 +307,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolume.LITERS,
         device_class=SensorDeviceClass.VOLUME,
+        state_class=SensorStateClass.TOTAL_INCREASING,
         value_fn=_rt("make_up_water_volume"),
     ),
     GruenbeckSensorDescription(
@@ -308,6 +315,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="exhausted_percentage",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=PERCENTAGE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("exhausted_percentage"),
     ),
     GruenbeckSensorDescription(
@@ -315,6 +323,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="actual_value_soft_water_hardness",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UNIT_DH,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("actual_value_soft_water_hardness"),
     ),
     GruenbeckSensorDescription(
@@ -322,6 +331,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="capacity_figure",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UNIT_M3_X_DH,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("capacity_figure"),
     ),
     GruenbeckSensorDescription(
@@ -330,6 +340,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR,
         device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("flow_rate_peak_value"),
     ),
     GruenbeckSensorDescription(
@@ -338,6 +349,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR,
         device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("exchanger_peak_value"),
     ),
     GruenbeckSensorDescription(
@@ -346,6 +358,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR,
         device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("exchanger_peak_value_2"),
     ),
     GruenbeckSensorDescription(
@@ -365,6 +378,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="regeneration_flow_rate_exchanger",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UNIT_L_H,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("regeneration_flow_rate_exchanger"),
     ),
     GruenbeckSensorDescription(
@@ -372,6 +386,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="regeneration_flow_rate_exchanger_2",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UNIT_L_H,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("regeneration_flow_rate_exchanger_2"),
     ),
     GruenbeckSensorDescription(
@@ -380,6 +395,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR,
         device_class=SensorDeviceClass.VOLUME_FLOW_RATE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("blending_flow_rate"),
     ),
     GruenbeckSensorDescription(
@@ -400,6 +416,7 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfElectricCurrent.MILLIAMPERE,
         device_class=SensorDeviceClass.CURRENT,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("current_chlorine"),
     ),
     GruenbeckSensorDescription(
@@ -407,7 +424,8 @@ SENSORS: tuple[GruenbeckSensorDescription, ...] = (
         translation_key="remaining_amount_of_water",
         entity_registry_enabled_default=False,
         native_unit_of_measurement=UnitOfVolume.CUBIC_METERS,
-        device_class=SensorDeviceClass.VOLUME,
+        device_class=SensorDeviceClass.VOLUME_STORAGE,
+        state_class=SensorStateClass.MEASUREMENT,
         value_fn=_rt("remaining_amount_of_water"),
     ),
 )
